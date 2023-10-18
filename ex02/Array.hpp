@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:13:07 by yena              #+#    #+#             */
-/*   Updated: 2023/10/09 20:15:55 by yena             ###   ########.fr       */
+/*   Updated: 2023/10/18 13:24:08 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,19 @@ Array<T>::Array(const Array<T> &other) {
   _data = new T[other._size];
   _size = other._size;
   for (unsigned i = 0; i < _size; i++) {
-	_data[i] = other._data[i];
+    _data[i] = other._data[i];
   }
 }
 
 template <typename T>
 Array<T> &Array<T>::operator=(const Array<T> &other) {
   if (this != &other) {
-	delete[] _data;
-	_data = new T[other._size];
-	_size = other._size;
-	for (int i = 0; i < _size; i++) {
-	  _data[i] = other._data[i];
-	}
+    delete[] _data;
+    _data = new T[other._size];
+    _size = other._size;
+    for (unsigned int i = 0; i < _size; i++) {
+      _data[i] = other._data[i];
+    }
   }
   return *this;
 }
@@ -77,7 +77,7 @@ Array<T>::~Array() {
 template <typename T>
 T &Array<T>::operator[](unsigned int idx) const {
   if (idx >= _size) {
-	throw std::exception();
+    throw std::exception();
   }
   return _data[idx];
 }
@@ -91,13 +91,13 @@ template <typename T>
 std::ostream &operator<<(std::ostream &os, const Array<T> &arr) {
   os << "[";
   for (unsigned int i = 0; i < arr.size(); i++) {
-	os << arr[i];
-	if (i != arr.size() - 1) {
-	  os << ", ";
-	}
+    os << arr[i];
+    if (i != arr.size() - 1) {
+      os << ", ";
+    }
   }
   os << "]";
   return os;
 }
 
-#endif //EX02__ARRAY_HPP_
+#endif  // EX02__ARRAY_HPP_
