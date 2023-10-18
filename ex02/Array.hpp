@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:13:07 by yena              #+#    #+#             */
-/*   Updated: 2023/10/18 13:24:08 by yena             ###   ########.fr       */
+/*   Updated: 2023/10/18 18:10:05 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@
 
 template <typename T>
 class Array {
- private:
-  T *_data;
-  unsigned int _size;
-
  public:
   Array();
   Array(unsigned int n);
@@ -33,6 +29,11 @@ class Array {
   ~Array();
   T &operator[](unsigned int idx) const;
   unsigned int size() const;
+
+ private:
+  T *_data;
+  unsigned int _size;
+
 };
 
 template <typename T>
