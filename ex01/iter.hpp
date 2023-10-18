@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 18:52:15 by yena              #+#    #+#             */
-/*   Updated: 2023/10/09 19:03:08 by yena             ###   ########.fr       */
+/*   Updated: 2023/10/18 18:01:28 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 
 #include <iostream>
 
-template <typename T>
+template<typename T>
 void print(T const &x) {
   std::cout << x << std::endl;
 }
 
-template <typename T>
+template<typename T>
 void iter(T *arr, int len, void (*func)(T const &)) {
   for (int i = 0; i < len; i++) {
-	func(arr[i]);
+    func(arr[i]);
   }
 }
 
