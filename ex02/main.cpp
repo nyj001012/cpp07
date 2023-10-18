@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:12:51 by yena              #+#    #+#             */
-/*   Updated: 2023/10/09 20:17:50 by yena             ###   ########.fr       */
+/*   Updated: 2023/10/18 13:25:24 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int main() {
   std::cout << "data: " << iArr << std::endl;
   std::cout << "[INFO]: Make exception" << std::endl;
   try {
-	sArr[4] = "exception";
+    sArr[4] = "exception";
   } catch (std::exception &e) {
-	std::cout << e.what() << std::endl;
+    std::cout << e.what() << std::endl;
   }
   std::cout << std::endl;
 
@@ -50,6 +50,7 @@ int main() {
   std::cout << "origin:\tdata: " << copyArr << std::endl;
   std::cout << "copy:\tsize: " << (&iArr)->size() << std::endl;
   std::cout << "copy:\tdata: " << iArr << std::endl;
+  std::cout << std::endl;
 
   std::cout << "-------------- ASSIGNMENT ARRAY ---------------" << std::endl;
   Array<std::string> assignArr;
